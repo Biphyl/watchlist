@@ -1,3 +1,5 @@
+{% extends 'base.html'%}
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -9,6 +11,22 @@
         {% endif %}
     </head>
     <body>
+        <!-- Content block -->
+        {% block content %}
+        <div class="container">
+
+            <!-- Poster background -->
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 movie-details">
+                    <h3>{{ movie.title }}</h3>
+
+                    <p class="overview">{{ movie.overview }}</p>
+                    <p class="ratings"> <b> {{ movie.vote_average }}</b> - <i> {{ movie.vote_count }} Votes </i></p>
+                </div>
+            </div>
+        </div>
+
+        {% endblock %}
 
     </body>
 </html>
