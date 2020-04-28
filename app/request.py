@@ -23,7 +23,7 @@ def get_movies(category):
         movie_results = None    
         
         if get_movies_response['results']:
-            movie_results_list = get_movies_response['result']
+            movie_results_list = get_movies_response['results']
             movie_results = process_results(movie_results_list)
 
 
