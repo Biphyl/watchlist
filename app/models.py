@@ -1,4 +1,5 @@
 from . import db
+from werkzeug.security import generate_password_hash,check_password_hash
 
 class Movie:
     '''
@@ -53,6 +54,8 @@ class User(db.Model):
 
     def __repr__(self):
         return f'User (self.username)'
+
+    pass_secure = db.Column(db.String(255))
 
 class Role(db.Model):
     __tablename__ = 'roles'
