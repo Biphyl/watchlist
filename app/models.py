@@ -65,9 +65,9 @@ class User(UserMixin,db.Model):
 
     pass_secure = db.Column(db.String(255))
         
-        @property
-        def password(self):
-            raise AttributeError('You cannot read the password attribute')
+    @property
+    def password(self):
+        raise AttributeError('You cannot read the password attribute')
 
         @password.setter
         def password(self, password):
